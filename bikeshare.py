@@ -1,3 +1,5 @@
+# The following code was completed by George Akol using the template 
+# provided by Udacity
 import time
 import pandas as pd
 import numpy as np
