@@ -19,3 +19,5 @@ The project requires 4 files to work:
 ### Credits
 The successful completion of this project was in part facilitated by stackoverflow but primarily by the great educators involved in the Udacity "Programming for Data Science with Python Nanodegree".
 
+Thank you to Udacity for all the effort put into developing this course.
+
