@@ -229,6 +229,7 @@ def raw_stats(df):
     idx = 0
     raw = str(input("Would you like to see the raw data (y or n)? ")).lower()
     
+    # Keep prompting user and displaying statistics until user enters 'n' 
     while True:
         if raw == 'y':
             print(df[idx : idx+5])
