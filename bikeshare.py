@@ -30,40 +30,40 @@ def get_filters():
                 
     # Ask user the user for a filter period (month, day, both or none)       
     while True:        
-            filter_period = str(input("Would you like to filter by month, day, both or continue with no filters (type 'none')? ")).lower()
-            if filter_period in ['month', 'day', 'both', 'none']:
+            filter_type = str(input("Would you like to filter by month, day, both or continue with no filters (type 'none')? ")).lower()
+            if filter_type in ['month', 'day', 'both', 'none']:
                 break
             else: 
                 print("It seems like you entered an invalid time period! Please try again.\n")
       
     # If applicable, request user to supply valid month filter 
-    if filter_period == "month" or filter_period == "both":        
+    if filter_type == "month" or filter_type == "both":        
         avail_months = ['january', 'february', 'march', 'april', 'may', 'june']
         
         while True:
             month = str(input("Enter the name of the month you are interested in (Options: Janauary, February, March, April, May, or June): ")).lower()
             if month in avail_months:    
-                if filter_period != "both":
+                if filter_type != "both":
                     day = 'all'
                 break
             else:
                 print("It seems like you entered an invalid day! Please try again.\n")
                        
     # If applicable, request user to supply valid day filter                 
-    if filter_period == "day" or filter_period == "both":        
+    if filter_type == "day" or filter_type == "both":        
         avail_days = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday']
         
         while True:
             day = str(input("Enter the day of the week you are interested in (Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday): ")).lower()
             if day in avail_days:
-                if filter_period != "both":
+                if filter_type != "both":
                     month = 'all'
                 break
             else:
                 print("It seems like you entered an invalid day! Please try again.\n")           
                       
     # If no filter is select, select all data         
-    elif filter_period == "none":
+    elif filter_type == "none":
         month = 'all'
         day = 'all'
    
